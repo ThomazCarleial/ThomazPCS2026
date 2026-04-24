@@ -15,6 +15,14 @@
       },
       {
         "type": "wokwi-resistor",
+        "id": "r2",
+        "top": 312,
+        "left": 9.05,
+        "rotate": 90,
+        "attrs": { "value": "220" }
+      },
+      {
+        "type": "wokwi-resistor",
         "id": "r3",
         "top": 312,
         "left": 28.25,
@@ -24,6 +32,13 @@
       { "type": "wokwi-led", "id": "led1", "top": 313.2, "left": -5.8, "attrs": { "color": "red" } },
       {
         "type": "wokwi-led",
+        "id": "led2",
+        "top": 313.2,
+        "left": 13.4,
+        "attrs": { "color": "yellow" }
+      },
+      {
+        "type": "wokwi-led",
         "id": "led3",
         "top": 313.2,
         "left": 32.6,
@@ -31,19 +46,25 @@
       }
     ],
     "connections": [
-      [ "bb1:bn.2", "uno:GND.2", "black", [ "v0" ] ],
-      [ "bb1:8t.a", "uno:2", "red", [ "v0" ] ],
-      [ "bb1:12t.a", "uno:4", "green", [ "v0" ] ],
-      [ "bb1:7b.h", "bb1:bn.5", "green", [ "v0" ] ],
-      [ "bb1:11b.h", "bb1:bn.8", "green", [ "v0" ] ],
       [ "r3:1", "bb1:12t.b", "", [ "$bb" ] ],
       [ "r3:2", "bb1:12b.f", "", [ "$bb" ] ],
+      [ "r2:1", "bb1:10t.b", "", [ "$bb" ] ],
+      [ "r2:2", "bb1:10b.f", "", [ "$bb" ] ],
       [ "r1:1", "bb1:8t.b", "", [ "$bb" ] ],
       [ "r1:2", "bb1:8b.f", "", [ "$bb" ] ],
+      [ "bb1:bn.2", "uno:GND.2", "black", [ "v0" ] ],
       [ "led1:A", "bb1:8b.g", "", [ "$bb" ] ],
       [ "led1:C", "bb1:7b.g", "", [ "$bb" ] ],
+      [ "led2:A", "bb1:10b.g", "", [ "$bb" ] ],
+      [ "led2:C", "bb1:9b.g", "", [ "$bb" ] ],
       [ "led3:A", "bb1:12b.g", "", [ "$bb" ] ],
-      [ "led3:C", "bb1:11b.g", "", [ "$bb" ] ]
+      [ "led3:C", "bb1:11b.g", "", [ "$bb" ] ],
+      [ "bb1:8t.a", "uno:2", "red", [ "v0" ] ],
+      [ "bb1:10t.a", "uno:3", "gold", [ "v0" ] ],
+      [ "bb1:12t.a", "uno:4", "green", [ "v0" ] ],
+      [ "bb1:7b.h", "bb1:bn.5", "green", [ "v0" ] ],
+      [ "bb1:9b.h", "bb1:bn.6", "green", [ "v0" ] ],
+      [ "bb1:11b.h", "bb1:bn.8", "green", [ "v0" ] ]
     ],
     "dependencies": {}
   }
